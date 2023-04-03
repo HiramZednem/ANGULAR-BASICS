@@ -1,0 +1,21 @@
+<h1>Listado de Heroes</h1>
+
+<button (click)="borrarHeroe()">
+  Borrar Heroe
+</button>
+
+<!-- Aca se esta mandando a llamar a esa referencia -->
+<p *ngIf="heroeBorrado; else noBorrar">
+  Heroe borrado: <span>{{heroeBorrado}}</span>
+</p>
+
+<!-- Este # es una referencia local que se usa del lado del template para trabajar vistas -->
+<ng-template #noBorrar>
+  <p>No se ha borrado nada</p>
+</ng-template>
+
+<ul>
+  <li *ngFor="let hero of heroes; let i = index;">
+    {{i + 1}}. {{hero}}
+  </li>
+</ul>
