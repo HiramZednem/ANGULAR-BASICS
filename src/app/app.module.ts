@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import { HeroesModule } from './heroes/heroes.module';
 import { ContadorModule } from './contador/contador.module';
+import { DbzModule } from './dbz/dbz.module';
 
 @NgModule({
   // App.modules sirve para hacer que la propiedad 'selector' de los componentes sea declarada y asi el sistema
@@ -15,7 +16,8 @@ import { ContadorModule } from './contador/contador.module';
   imports: [
     BrowserModule,
     HeroesModule,
-    ContadorModule
+    ContadorModule,
+    DbzModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -29,7 +31,4 @@ export class AppModule { }
 * de ventas necesarios para que mi apartado funcione, pero resulta que mi cliente final nunca entra a eses apartado,
 * entonces basicamente estaria cargando en mi aplicacion un monton de modulos que serian inecesarios, para eso es muy
 * importante crear varios modulos y mandar a llamarlos cuando sean necesarios evitando el lazy load
-*
-*
-*
 */

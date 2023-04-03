@@ -1,0 +1,25 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+
+  <div class="col">
+    <!--
+        Con esta notacion le estoy pasando a la propiedad el valor
+          [propiedad] -> es la propiedad de mi componente hijo
+          "valor" -> es el valor del componente padre
+        cabe recalcar que se estan pasando en tiempo real y van a tener una comunicacion abierta.
+     -->
+    <app-personajes [personajes]="personajes" />
+  </div>
+
+  <div class="col">
+    <app-agregar
+      [nuevo]="nuevo"
+      (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"/>
+      <!-- Aca, se va a disparar cuando se dispare el 'onNuevoPersonaje', que es un evento que estamos manejando
+       desde el componente hijo, entencos el evento que trae dentro, trae las propiedades que nosotros emitimos atras
+         con el onNuevoPersonaje.emit( esto es lo que voy a recibir y se va a pasar al padre )-->
+  </div>
+
+</div>

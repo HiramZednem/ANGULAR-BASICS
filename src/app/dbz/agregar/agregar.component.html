@@ -1,0 +1,28 @@
+<h3>Agregar</h3>
+<hr>
+
+<!--
+  Quiero hacer una pauso importante aca, los eventos se escuchan con [], y se emiten con ()
+  por ejemplo
+    [ngModel]="nuevo.nombre" -> esta diciendo que lea la propiedad,
+    [(ngModel)]="nuevo.nombre" -> esta diciendo que la lea, y cuando pase un evento la actualize
+ -->
+<form (ngSubmit)="agregar()">
+  <input
+    placeholder="personaje"
+    type="text"
+    name="nombre"
+    [(ngModel)]="nuevo.nombre"
+  />
+
+  <input
+    placeholder="poder"
+    type="number"
+    name="poder"
+    [(ngModel)]="nuevo.poder"
+  />
+
+  <button type="submit">
+    Agregar
+  </button>
+</form>
