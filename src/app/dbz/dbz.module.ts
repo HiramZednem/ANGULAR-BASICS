@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { MainPageComponent } from './main-page/main-page.component';
 import { PersonajesComponent } from './personajes/personajes.component';
 import { AgregarComponent } from './agregar/agregar.component';
+import { DbzService } from './services/dbz.service';
 
 
 
@@ -21,6 +22,10 @@ import { AgregarComponent } from './agregar/agregar.component';
   imports: [
     CommonModule,
     FormsModule,
+  ],
+  // Los providers son enteramente los servicios que sirven como singletons para trabajar con la informacion que trean dentro
+  providers: [
+    DbzService
   ]
 })
 export class DbzModule { }

@@ -10,13 +10,11 @@
           "valor" -> es el valor del componente padre
         cabe recalcar que se estan pasando en tiempo real y van a tener una comunicacion abierta.
      -->
-    <app-personajes [personajes]="personajes" />
+    <app-personajes/>
   </div>
 
   <div class="col">
-    <app-agregar
-      [nuevo]="nuevo"
-      (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"/>
+    <app-agregar [nuevo]="nuevo"/>
       <!-- Aca, se va a disparar cuando se dispare el 'onNuevoPersonaje', que es un evento que estamos manejando
        desde el componente hijo, entencos el evento que trae dentro, trae las propiedades que nosotros emitimos atras
          con el onNuevoPersonaje.emit( esto es lo que voy a recibir y se va a pasar al padre )-->
