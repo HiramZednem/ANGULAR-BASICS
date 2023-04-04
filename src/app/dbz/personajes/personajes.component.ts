@@ -15,6 +15,5 @@ export class PersonajesComponent {
   get personajes(): Personje[] {
     return this.dbzService.personajes;
   }
-  constructor(private dbzService: DbzService) {
-  }
+  constructor(private dbzService: DbzService) {}
 }

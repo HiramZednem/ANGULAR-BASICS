@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Personje } from '../interfaces/dbz.interface';
 
+
+/*
+La ventaja de utilizar los servicios es que la logica de la aplicacion esta centrada en un solo lugar.
+*/
 @Injectable()
 export class DbzService {
 
@@ -21,5 +25,9 @@ export class DbzService {
 
   constructor() {
     console.log('servicio inicializado')
+  }
+
+  agregarpersonaje( personaje: Personje ) {
+    this._personajes.push(personaje);
   }
 }
